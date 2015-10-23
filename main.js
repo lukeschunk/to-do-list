@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     var input = $("#main-input");
 
 
@@ -14,21 +14,26 @@ $(document).ready(function () {
 
     $("#main-input").on("keyup", function (event) {
         if (event.which == 13) {
-            addToList();  
+            addToList();
         }
     });
 
     function addToList() {
         input = $("#main-input").val();
-        $(".item-container").append(input);
+        $(".item-container").append("<p class='item'>" + input + "</p>");
         $("#main-input").val("");
-        input.addClass("item"); //THIS IS THE LINE I NEED TO WORK
-                                //IT SHOULD LOOK LIKE THE OTHER P ELEMENTS                                 //THAT ARE HARD CODED IN THE HTML
         console.log(input);
-//        $(".item-container").append(input);
+        //        $(".item-container").append(input);
     }
 
-
-
+    $(".item-container").on('click', 'p', function () {
+        $(this).css({
+            opacity: "0.3"
+        }).addClass("secondClick");
+    });
+    
+//    $(".secondClick").on('click', function(){
+//       $(this).remove; 
+//    });
 
 });
