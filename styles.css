@@ -89,3 +89,34 @@ html body {
     display: block;
 }
 
+.display-none-class {
+    display:non
+}
+
+.animation {
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 5s; 
+    animation-name: example;
+    animation-duration: 3s;
+    position: relative;
+}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {left:0px; top:0px;}
+
+    50%  {left:400px; top:0px;}
+    75%  {opacity: 0; left:400px; top:0px;}
+    100% {opacity: 0; left:0px; top:0px; background-color: dodgerblue;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {left:0px; top:0px;}
+
+    50%  {left:400px; top:0px;}
+    75%  {opacity: 0; left:400px; top:0px;}
+    100% {opacity: 0; left:0px; top:0px; background-color: dodgerblue;}
+}
+
